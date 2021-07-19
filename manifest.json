@@ -1,6 +1,15 @@
 {
-  "name": "Fix Twitter",
-  "description": "Meme extension to fix Twitter",
-  "version": "1.0",
-  "manifest_version": 3
+	"name": "Fix Twitter",
+	"author": "Alex @punisheddoce",
+	"description": "Meme extension to fix Twitter",
+	"version": "1.0",
+	"manifest_version": 3,
+	"run_at": "document_end",
+	"permissions": ["scripting"],
+	"content_scripts": [
+		{
+			"matches": ["https://twitter.com/*", "https://*.twitter.com/*"],
+			"js": ["main.js"]
+		}
+	]
 }
